@@ -3,7 +3,7 @@
 namespace Skydiver\LaravelCheckUpdates;
 
 use Illuminate\Support\ServiceProvider;
-use Skydiver\LaravelCheckUpdates\Console\CheckUpdates;
+use Skydiver\LaravelCheckUpdates\Console\CheckLaravelUpdates;
 
 class LaravelCheckUpdatesServiceProvider extends ServiceProvider
 {
@@ -11,7 +11,7 @@ class LaravelCheckUpdatesServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                CheckUpdates::class
+                CheckLaravelUpdates::class
             ]);
         }
     }

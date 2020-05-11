@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Packagist\Api\Client as PackagistClient;
 use Skydiver\LaravelCheckUpdates\Version;
 
-class CheckUpdates extends Command
+class CheckLaravelUpdates extends Command
 {
     protected $signature = 'updates:laravel';
     protected $description = 'Check for Laravel updates';
