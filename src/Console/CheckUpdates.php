@@ -18,6 +18,8 @@ class CheckUpdates extends Command
 
     public function handle()
     {
+        $this->info('Checking your Laravel version ...');
+
         $client = new PackagistClient();
         $package = $client->get('laravel/framework');
 
