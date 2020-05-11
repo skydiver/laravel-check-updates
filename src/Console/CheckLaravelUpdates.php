@@ -3,8 +3,7 @@
 namespace Skydiver\LaravelCheckUpdates\Console;
 
 use Illuminate\Console\Command;
-use Packagist\Api\Client as PackagistClient;
-use Skydiver\LaravelCheckUpdates\Version;
+use Skydiver\LaravelCheckUpdates\Services\LaravelUpdates;
 
 class CheckLaravelUpdates extends Command
 {
@@ -20,15 +19,8 @@ class CheckLaravelUpdates extends Command
     {
         $this->info('Checking latest Laravel version ...');
 
-        $client = new PackagistClient();
-        $package = $client->get('laravel/framework');
-
-        $versions = collect($package->getVersions())->map(function ($version) {
-            return $version->getVersion();
-        })->toArray();
-
         $current = app()->version();
-        $latest = Version::latest($versions);
+        $latest = LaravelUpdates::getLatest();
 
         $headers = ['Installed Version', 'Latest Version'];
 
