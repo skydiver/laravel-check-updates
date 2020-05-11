@@ -1,9 +1,11 @@
 {
   "name": "skydiver/laravel-check-updates",
-  "description": "Check for Laravel updates from your command line",
+  "description": "Check Laravel updates from your command line",
   "keywords": [
-    "skydiver",
-    "laravel-check-updates"
+    "laravel",
+    "package",
+    "updates",
+    "check-updates"
   ],
   "homepage": "https://github.com/skydiver/laravel-check-updates",
   "license": "MIT",
@@ -21,23 +23,10 @@
     "illuminate/support": ">=6.0",
     "knplabs/packagist-api": "^1.5"
   },
-  "require-dev": {
-    "orchestra/testbench": "^4.0",
-    "phpunit/phpunit": "^8.0"
-  },
   "autoload": {
     "psr-4": {
       "Skydiver\\LaravelCheckUpdates\\": "src"
     }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Skydiver\\LaravelCheckUpdates\\Tests\\": "tests"
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/phpunit",
-    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
   },
   "config": {
     "sort-packages": true
@@ -46,10 +35,7 @@
     "laravel": {
       "providers": [
         "Skydiver\\LaravelCheckUpdates\\LaravelCheckUpdatesServiceProvider"
-      ],
-      "aliases": {
-        "LaravelCheckUpdates": "Skydiver\\LaravelCheckUpdates\\LaravelCheckUpdatesFacade"
-      }
+      ]
     }
   }
 }
