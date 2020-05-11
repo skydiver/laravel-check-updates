@@ -32,6 +32,10 @@ class CheckUpdates extends Command
 
         $headers = ['Installed Version', 'Latest Version'];
 
+        $current = version_compare($current, $latest, '<') ?
+            $current = sprintf('<fg=white;bg=red>%s<fg=default>', $current) :
+            $current;
+
         $this->table($headers, [
             [$current, $latest]
         ]);
