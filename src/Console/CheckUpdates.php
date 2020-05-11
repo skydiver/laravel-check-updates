@@ -28,7 +28,10 @@ class CheckUpdates extends Command
         $current = app()->version();
         $latest = Version::latest($versions);
 
-        dump($current);
-        dump($latest);
+        $headers = ['Installed Version', 'Latest Version'];
+
+        $this->table($headers, [
+            [$current, $latest]
+        ]);
     }
 }
