@@ -2,10 +2,19 @@
 > Check Laravel updates from your command line
 
 ## Installation
-Run `composer require skydiver/laravel-check-updates`
+On your Laravel project run:
+```
+composer require skydiver/laravel-check-updates
+```
 
 ## Usage
-`php artisan updates:laravel`
+After package installed, two new artisan commands will be available:
+```
+php artisan updates:laravel
+```
+```
+php artisan updates:nova
+```
 
 ## Compatibility
 This package was tested on Laravel 6 & 7.
